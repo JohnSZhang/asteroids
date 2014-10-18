@@ -16,8 +16,10 @@
     </div>
     <script type="text/javascript">
     $(function () {
-      // Get Window Size & Disable Default Down Key
-      var canvasSize = { width: $(window).width(), height: $(window).height() - 50 };
+      // Get Window Size & Offset For Chrome Scroll For Now
+      var canvasSize = { width: $(window).width() - 50,
+                     height: $(window).height() - 50 
+                   };
       
       // Create Canvas
       var canvas = $("<canvas id='canvas'></canvas>")
