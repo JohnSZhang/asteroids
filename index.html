@@ -9,7 +9,10 @@
 
     <script src="lib/objects/movingOjbect.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/objects/bullet.js" type="text/javascript" charset="utf-8"></script>
-    <script src="lib/objects/ship.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/objects/ships/ship.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/objects/ships/player_ship.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/objects/ships/enemy_ship.js" type="text/javascript" charset="utf-8"></script>
+    
     <script src="lib/objects/asteroid.js" type="text/javascript" charset="utf-8"></script>
 
     <script src="lib/game/gameView.js" type="text/javascript" charset="utf-8"></script>
@@ -20,7 +23,7 @@
     <div id="canvasDiv">
     </div>
     <script type="text/javascript">
-    $(function () {
+    $( function () {
       // Get Window Size & Offset For Chrome Scroll For Now
       var canvasSize = { width: $(window).width() - 50,
                      height: $(window).height() - 50 
@@ -34,6 +37,7 @@
       
       // Create Game
       var game = new Asteroids.Game(canvasSize);
+      window.game = game
       var context = document.getElementById("canvas").getContext("2d");
       var gameView = new Asteroids.GameView(
         { game: game, context: context}
