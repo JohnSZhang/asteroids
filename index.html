@@ -17,7 +17,7 @@
 
     <script src="lib/game/gameView.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/game/game.js" type="text/javascript" charset="utf-8"></script>
-    
+    <link rel="stylesheet" href="assets/css/game.css" type="text/css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
     <div id="canvasDiv">
@@ -31,9 +31,9 @@
       
       // Create Canvas
       var canvas = $("<canvas id='canvas'></canvas>")
-      canvas.prop("width", canvasSize.width)
-      canvas.prop("height", canvasSize.height)
-      $('#canvasDiv').append(canvas)
+      canvas.prop("width", canvasSize.width);
+      canvas.prop("height", canvasSize.height);
+      $('#canvasDiv').append(canvas);
       
       // Create Game
       var game = new Asteroids.Game(canvasSize);
