@@ -12,9 +12,10 @@
     <script src="lib/objects/ships/ship.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/objects/ships/player_ship.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/objects/ships/enemy_ship.js" type="text/javascript" charset="utf-8"></script>
-    
-    <script src="lib/objects/asteroid.js" type="text/javascript" charset="utf-8"></script>
 
+    <script src="lib/objects/asteroid.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/objects/static/static.js" type="text/javascript" charset="utf-8"></script>
+    <script src="lib/objects/static/healthBar.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/game/gameView.js" type="text/javascript" charset="utf-8"></script>
     <script src="lib/game/game.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" href="assets/css/game.css" type="text/css" media="screen" title="no title" charset="utf-8">
@@ -26,15 +27,15 @@
     $( function () {
       // Get Window Size & Offset For Chrome Scroll For Now
       var canvasSize = { width: $(window).width() - 50,
-                     height: $(window).height() - 50 
+                     height: $(window).height() - 50
                    };
-      
+
       // Create Canvas
       var canvas = $("<canvas id='canvas'></canvas>")
       canvas.prop("width", canvasSize.width);
       canvas.prop("height", canvasSize.height);
       $('#canvasDiv').append(canvas);
-      
+
       // Create Game
       var game = new Asteroids.Game(canvasSize);
       window.game = game
@@ -42,7 +43,7 @@
       var gameView = new Asteroids.GameView(
         { game: game, context: context}
       );
-      gameView.start(); 
+      gameView.start();
     });
     </script>
   </body>
