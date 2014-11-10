@@ -28,7 +28,7 @@ function getFile(response, filePath, content) {
 
 http.createServer(function (req, res) {
   var filePath = false;
-  if(req.url === '/') {
+  if(req.url === '/' || !req.url) {
     filePath = 'index.html';
   } else {
     filePath = req.url
