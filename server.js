@@ -6,7 +6,7 @@ var cache = {};
 
 function staticServer(response, cache, filePath) {
   if (cache[filePath]) {
-    getFile(response, path, cahce[filePath]);
+    getFile(response, path, cache[filePath]);
   } else {
     fs.readFile(filePath, function(status, data){
       cache[filePath] = data;
