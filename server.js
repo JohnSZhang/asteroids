@@ -35,5 +35,5 @@ http.createServer(function (req, res) {
   }
   var fullPath = './' + filePath;
   staticServer(res, cache, fullPath)
-}).listen(3000);
+}).listen(process.env.PORT || 3000);
 console.log('Server running at http://localhost:3000/')
