@@ -3,7 +3,7 @@ var mime = require('mime');
 var fs = require('fs');
 var path = require('path');
 
-function staticServer(response, cache, filePath) {
+function staticServer(response, filePath) {
     fs.readFile(filePath, function(status, data){
       getFile(response, filePath, data)
     })
@@ -27,6 +27,6 @@ http.createServer(function (req, res) {
     filePath = req.url
   }
   var fullPath = './' + filePath;
-  staticServer(res, cache, fullPath)
+  staticServer(res, fullPath)
 }).listen(process.env.PORT || 3000);
 console.log('Server running at http://localhost:3000/')
