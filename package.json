@@ -9,5 +9,7 @@
   , "dependencies": {
     "mime": "~1.2.7"
   }
-  , "engine": "node 0.10.29"
+  , "engines": {
+    "node": "0.10.29"
+  }
 }
